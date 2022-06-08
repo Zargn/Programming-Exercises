@@ -1,13 +1,23 @@
-using UnityEngine;
+
+
+using System;
 
 namespace Models
 {
-    public class Cell : MonoBehaviour
+    public class Cell
     {
+        private char symbol;
+        public event Action IconChanged;
+        
+        
         public char Symbol
         {
-            get;
-            set;
+            get => symbol;
+            set
+            {
+                symbol = value;
+                IconChanged.Invoke();
+            }
         }
     }
 }
