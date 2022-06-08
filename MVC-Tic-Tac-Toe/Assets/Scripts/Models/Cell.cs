@@ -7,7 +7,7 @@ namespace Models
     public class Cell
     {
         private char symbol;
-        public event Action IconChanged;
+        public event Action<char> IconChanged;
         
         
         public char Symbol
@@ -16,7 +16,7 @@ namespace Models
             set
             {
                 symbol = value;
-                IconChanged?.Invoke();
+                IconChanged?.Invoke(symbol);
             }
         }
     }

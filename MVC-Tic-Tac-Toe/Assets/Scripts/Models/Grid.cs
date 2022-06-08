@@ -4,7 +4,7 @@ namespace Models
 {
     public class Grid
     {
-        public event Action<Cell> CellAdded;
+        public event Action<Cell, int, int> CellAdded;
         
         public Cell[,] GridCells
         {
@@ -14,7 +14,7 @@ namespace Models
         public void CreateCell(int x, int y)
         {
             GridCells[x, y] = new Cell();
-            CellAdded?.Invoke(GridCells[x, y]);
+            CellAdded?.Invoke(GridCells[x, y], x, y);
         }
 
         public Grid(int width, int height)
