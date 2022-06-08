@@ -16,7 +16,7 @@ namespace Models
             set
             {
                 symbol = value;
-                IconChanged.Invoke();
+                IconChanged?.Invoke();
             }
         }
     }
