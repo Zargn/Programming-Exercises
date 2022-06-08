@@ -13,6 +13,8 @@ GameObject:
   - component: {fileID: 5192854016179067683}
   - component: {fileID: 5192854016179067682}
   - component: {fileID: 1475811640174753097}
+  - component: {fileID: 1920999560}
+  - component: {fileID: 1920999561}
   m_Layer: 5
   m_Name: GridCanvas
   m_TagString: Untagged
@@ -113,4 +115,32 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ce66fc7ca2ab405881bb0764594722fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cellViewPrefab: {fileID: 0}
+  cellViewPrefab: {fileID: 3020199714494569853, guid: eaa643aaada32fb4798f88b1d8e8c902, type: 3}
+--- !u!114 &1920999560
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5192854016179067685}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac6a91d1137126e4aaf11754f76287e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gridController: {fileID: 1920999561}
+  gridView: {fileID: 1475811640174753097}
+--- !u!114 &1920999561
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5192854016179067685}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: def8487aa936ac34e862d97c5516bffe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gridWidth: 3
+  gridHeight: 3

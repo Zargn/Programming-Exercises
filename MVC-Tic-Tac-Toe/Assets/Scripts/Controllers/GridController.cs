@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.Burst.Intrinsics;
 using UnityEngine;
 using Grid = Models.Grid;
 
@@ -26,5 +27,15 @@ public class GridController : MonoBehaviour
                 grid.CreateCell(x, y);
             }
         }
+    }
+
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.A))
+            grid.GridCells[1, 1].Symbol = 'X';
+        if (Input.GetKeyDown(KeyCode.S))
+            grid.GridCells[1, 1].Symbol = 'O';
+        if (Input.GetKeyDown(KeyCode.D))
+            grid.GridCells[1, 1].Symbol = ' ';
     }
 }
