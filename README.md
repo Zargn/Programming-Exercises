@@ -1,2 +1,3 @@
 # ProgrammingExercises
- Collection of programming exercises
+ 
+ Collection of finished or wip programming exercises.
